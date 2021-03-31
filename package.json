@@ -1,0 +1,39 @@
+{
+	"name": "mern-comm",
+	"version": "1.0.0",
+	"description": "mern ecommerce app",
+	"main": "server.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node backend/server",
+		"server": "nodemon backend/server",
+		"client": "npm start --prefix frontend",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"data:import": "node backend/seeder",
+		"data:destroy": "node backend/seeder -d"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ChewyPaste/mern-comm.git"
+	},
+	"author": "cheong",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ChewyPaste/mern-comm/issues"
+	},
+	"homepage": "https://github.com/ChewyPaste/mern-comm#readme",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"colors": "^1.4.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-async-handler": "^1.1.4",
+		"mongoose": "^5.12.2"
+	},
+	"devDependencies": {
+		"concurrently": "^6.0.0",
+		"http-proxy-middleware": "^1.0.6",
+		"nodemon": "^2.0.7"
+	}
+}
